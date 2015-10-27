@@ -19,7 +19,7 @@
         "symfony/routing": "~2.3",
         "symfony/property-access": "~2.3",
         "symfony/phpunit-bridge": "~2.7",
-        "propel/propel1": "~1.6",
+        "propel/propel": "2.0.x-dev",
         "fabpot/php-cs-fixer": "~0.1|~1.0"
     },
     "suggest": {
