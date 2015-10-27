@@ -11,7 +11,7 @@
 
 namespace Exporter\Source;
 
-use PropelCollection;
+use Propel\Runtime\Collection\Collection;
 use Symfony\Component\PropertyAccess\PropertyAccess;
 use Symfony\Component\PropertyAccess\PropertyPath;
 
@@ -23,7 +23,7 @@ use Symfony\Component\PropertyAccess\PropertyPath;
 class PropelCollectionSourceIterator implements SourceIteratorInterface
 {
     /**
-     * @var \PropelCollection
+     * @var Collection
      */
     protected $collection;
 
@@ -45,11 +45,11 @@ class PropelCollectionSourceIterator implements SourceIteratorInterface
     protected $dateTimeFormat;
 
     /**
-     * @param \PropelCollection $query          The Doctrine Query
+     * @param Collection $query          The Doctrine Query
      * @param array             $fields         Fields to export
      * @param string            $dateTimeFormat
      */
-    public function __construct(PropelCollection $collection, array $fields, $dateTimeFormat = 'r')
+    public function __construct(Collection $collection, array $fields, $dateTimeFormat = 'r')
     {
         $this->collection = clone $collection;
 
